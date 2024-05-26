@@ -319,7 +319,12 @@ export async function getStaticProps() {
     // }))
     .map((item) => ({
       ...item,
-      title: item.description ? item.description.replace(/^分类\-/, '') : '',
+      title: item.description
+        ? item.description
+            .replace(/^分类\s*\-\s*/, '')
+            .replace(/\s*相关$/, '')
+            .trim()
+        : '',
     }))
     .filter((item) => item.title !== '账号备忘录')
     .sort((pre, next) => {

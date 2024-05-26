@@ -43,7 +43,9 @@ export const fetchArticles = async (
       'X-GitHub-Api-Version': GitHubApiVersion,
       Authorization: `Bearer ${auth}`,
     },
-  }).then((response) => response.json());
+  })
+    .then((response) => response.json())
+    .then((items) => items.filter((item) => item.id !== 20)); // 20: 账号信息
 };
 
 /**
