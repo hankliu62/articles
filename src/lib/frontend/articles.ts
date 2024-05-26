@@ -45,7 +45,7 @@ export const fetchArticles = async (
     },
   })
     .then((response) => response.json())
-    .then((items) => items.filter((item) => item.id !== 20)); // 20: 账号信息
+    .then((items) => items.filter((item) => item.number !== 20)); // 20: 账号信息
 };
 
 /**

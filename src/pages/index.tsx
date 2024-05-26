@@ -144,7 +144,7 @@ export default function Questions({ labels }: InferGetStaticPropsType<typeof get
             allowClear
           />
           <Collapse
-            className="questions-collapse"
+            className="articles-collapse"
             defaultActiveKey={['labels']}
             onChange={(key) => {
               setExpanded(key.includes('labels'));
